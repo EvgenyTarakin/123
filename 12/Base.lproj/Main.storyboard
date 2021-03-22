@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vD5-r1-NBw"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yMo-yV-zeX"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0m-kD-nmo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -100,9 +100,6 @@
                                 <state key="normal" title="Войти">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="tappedEntryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M0s-eE-ZwJ"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -235,12 +232,14 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Xt3-fP-fbq" firstAttribute="height" secondItem="rGN-zv-Brc" secondAttribute="height" id="Jdc-IB-CnK"/>
+                                    <constraint firstItem="Xt3-fP-fbq" firstAttribute="top" secondItem="rGN-zv-Brc" secondAttribute="top" id="3Cz-NN-Xdf"/>
+                                    <constraint firstItem="Xt3-fP-fbq" firstAttribute="leading" secondItem="rGN-zv-Brc" secondAttribute="leading" id="Isw-jp-DZ3"/>
+                                    <constraint firstItem="rGN-zv-Brc" firstAttribute="bottom" secondItem="Xt3-fP-fbq" secondAttribute="bottom" id="JLt-op-ui4"/>
                                     <constraint firstItem="Xt3-fP-fbq" firstAttribute="leading" secondItem="HfV-AX-C8g" secondAttribute="leading" id="KFW-wg-4fg"/>
                                     <constraint firstItem="Xt3-fP-fbq" firstAttribute="top" secondItem="HfV-AX-C8g" secondAttribute="top" id="USb-aV-Btp"/>
-                                    <constraint firstItem="Xt3-fP-fbq" firstAttribute="width" secondItem="rGN-zv-Brc" secondAttribute="width" id="VBQ-sG-qwe"/>
-                                    <constraint firstItem="Xt3-fP-fbq" firstAttribute="bottom" secondItem="HfV-AX-C8g" secondAttribute="bottom" id="hGF-fu-xPE"/>
-                                    <constraint firstItem="Xt3-fP-fbq" firstAttribute="trailing" secondItem="HfV-AX-C8g" secondAttribute="trailing" id="slW-zW-WOF"/>
+                                    <constraint firstItem="Xt3-fP-fbq" firstAttribute="bottom" secondItem="HfV-AX-C8g" secondAttribute="bottom" constant="818" id="hGF-fu-xPE"/>
+                                    <constraint firstItem="rGN-zv-Brc" firstAttribute="trailing" secondItem="Xt3-fP-fbq" secondAttribute="trailing" id="mCx-Yu-SH6"/>
+                                    <constraint firstItem="Xt3-fP-fbq" firstAttribute="trailing" secondItem="HfV-AX-C8g" secondAttribute="trailing" constant="414" id="slW-zW-WOF"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="HfV-AX-C8g"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="rGN-zv-Brc"/>
@@ -249,149 +248,38 @@
                         <viewLayoutGuide key="safeArea" id="Cxe-YR-7Rd"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Kp9-ar-pMe" firstAttribute="top" secondItem="Xt3-fP-fbq" secondAttribute="top" constant="181" id="BBz-RM-S2V"/>
+                            <constraint firstItem="Kp9-ar-pMe" firstAttribute="top" secondItem="Cxe-YR-7Rd" secondAttribute="top" constant="181" id="BBz-RM-S2V"/>
                             <constraint firstItem="Kp9-ar-pMe" firstAttribute="leading" secondItem="Cxe-YR-7Rd" secondAttribute="leading" constant="89" id="D8F-am-qqT"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="registrationScrollView" destination="A51-P8-7CQ" id="N3k-G6-A4E"/>
-                        <outletCollection property="collectionRegistrationTextFieldsOutlets" destination="D5T-Nd-Mcx" collectionClass="NSMutableArray" id="azo-52-3t4"/>
-                        <outletCollection property="collectionRegistrationTextFieldsOutlets" destination="3LN-gP-2BW" collectionClass="NSMutableArray" id="H8M-1Q-rAK"/>
-                        <outletCollection property="collectionRegistrationTextFieldsOutlets" destination="mz7-TM-dc9" collectionClass="NSMutableArray" id="l7r-Xt-VEV"/>
+                        <outlet property="loginRegistrationTextField" destination="D5T-Nd-Mcx" id="JtO-Of-83D"/>
+                        <outlet property="passwordRegistrationTextField" destination="3LN-gP-2BW" id="K30-S7-D4e"/>
+                        <outlet property="passwordRepeatRegistrationTextField" destination="mz7-TM-dc9" id="Ki4-LX-fy7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EuX-wj-X3h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="518.84057971014499" y="93.75"/>
         </scene>
-        <!--Item-->
+        <!--User Authorization View Controller-->
         <scene sceneID="aMC-1d-VW1">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rFX-Hd-EX8" customClass="ProfileViewController" customModule="_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserAuthorizationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rFX-Hd-EX8" customClass="UserAuthorizationViewController" customModule="_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eqk-GH-ZNE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oc0-uw-jUd">
-                                <rect key="frame" x="0.0" y="734" width="414" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Выйти">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="exitButton:" destination="rFX-Hd-EX8" eventType="touchUpInside" id="oKe-P9-Fh9"/>
-                                    <action selector="tappedReadyButton:" destination="uu0-Ju-B35" eventType="touchUpInside" id="lvq-5e-61x"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YSS-OO-v97">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="539"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="67o-Tx-XI7"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="3hM-XR-i3H"/>
-                    <navigationItem key="navigationItem" id="3In-eq-3fm"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nMG-M8-2fq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2794.202898550725" y="428.57142857142856"/>
-        </scene>
-        <!--Выбор планеты-->
-        <scene sceneID="Anl-Sw-1fe">
-            <objects>
-                <navigationController id="pDN-WA-ZvE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Выбор планеты" image="Planet" id="9Gp-NU-ATX"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ULO-tZ-lkx">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="3rC-dw-uoW" kind="relationship" relationship="rootViewController" id="b9w-z1-fMQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X3c-er-Voc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2086" y="-260"/>
-        </scene>
-        <!--Выбор планеты-->
-        <scene sceneID="6ah-pf-NFc">
-            <objects>
-                <viewController storyboardIdentifier="PlanetsListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3rC-dw-uoW" customClass="PlanetsListViewController" customModule="_2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ECI-Tq-ohW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I3C-sk-Ib8">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Qdd-Qe-Yg6"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="iuE-Kd-MMS"/>
-                    <navigationItem key="navigationItem" title="Выбор планеты" id="o39-8a-Y74">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="Refresh" id="R3c-As-p1K">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7M3-Rk-9hI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2794.202898550725" y="-260.49107142857144"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="WjH-w0-Ci4">
-            <objects>
-                <tabBarController storyboardIdentifier="TabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O3c-Py-3ds" customClass="TabBarController" customModule="_2" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="CZO-ha-j9s"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PFe-kG-BPW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="pDN-WA-ZvE" kind="relationship" relationship="viewControllers" id="xLz-EV-c8b"/>
-                        <segue destination="P6H-wE-WEn" kind="relationship" relationship="viewControllers" id="ydn-JU-Kc8"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zyf-XZ-WjT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1246" y="94"/>
-        </scene>
-        <!--Профиль-->
-        <scene sceneID="PZc-RA-b65">
-            <objects>
-                <navigationController id="P6H-wE-WEn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Профиль" image="Profile" id="mPL-TV-SvY"/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="qhC-bO-544">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="rFX-Hd-EX8" kind="relationship" relationship="rootViewController" id="6WG-Cn-64E"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9gf-0d-xv7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2086" y="429"/>
+            <point key="canvasLocation" x="1300" y="94"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Planet" width="37.666667938232422" height="37.666667938232422"/>
-        <image name="Profile" width="37.666667938232422" height="37.666667938232422"/>
-        <image name="Refresh" width="56.666667938232422" height="56.666667938232422"/>
-        <image name="avatar" width="180" height="180"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="avatar" width="120" height="120"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
