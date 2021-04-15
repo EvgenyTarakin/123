@@ -13,7 +13,22 @@
 		1B12415925FF8FCE00398F86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B12415725FF8FCE00398F86 /* Main.storyboard */; };
 		1B12415B25FF8FCF00398F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B12415A25FF8FCF00398F86 /* Assets.xcassets */; };
 		1B12415E25FF8FCF00398F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B12415C25FF8FCF00398F86 /* LaunchScreen.storyboard */; };
-		1B91E004261A190B00DF6D59 /* UserAuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91E003261A190B00DF6D59 /* UserAuthorizationViewController.swift */; };
+		1B4FD8862625796C002A6217 /* AvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B4FD8852625796C002A6217 /* AvatarCell.xib */; };
+		1B91E004261A190B00DF6D59 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91E003261A190B00DF6D59 /* ProfileViewController.swift */; };
+		1BB9837F261B3EBE00BB4A51 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1BB9837E261B3EBE00BB4A51 /* Alamofire */; };
+		1BB98384261B414D00BB4A51 /* PlanetsListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB98383261B414D00BB4A51 /* PlanetsListResponseModel.swift */; };
+		1BB98387261B44AA00BB4A51 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB98386261B44AA00BB4A51 /* NetworkService.swift */; };
+		1BBAB58B262812A20001D4CC /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBAB58A262812A20001D4CC /* AvatarCell.swift */; };
+		1BBAB59026281E850001D4CC /* DataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBAB58E26281E850001D4CC /* DataCell.swift */; };
+		1BBAB59126281E850001D4CC /* DataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BBAB58F26281E850001D4CC /* DataCell.xib */; };
+		1BBAB596262867530001D4CC /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1BBAB595262867530001D4CC /* RxSwift */; };
+		1BBAB59A262867530001D4CC /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 1BBAB599262867530001D4CC /* RxRelay */; };
+		1BBAB59C262867530001D4CC /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1BBAB59B262867530001D4CC /* RxCocoa */; };
+		1BBAB59E262867530001D4CC /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 1BBAB59D262867530001D4CC /* RxBlocking */; };
+		1BBAB5A1262867C60001D4CC /* RxNetworkServies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBAB5A0262867C60001D4CC /* RxNetworkServies.swift */; };
+		1BBAB5A4262868BC0001D4CC /* LocationsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBAB5A3262868BC0001D4CC /* LocationsResponseModel.swift */; };
+		1BC6D45D261B3A1E00A43753 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 1BC6D45C261B3A1E00A43753 /* PKHUD */; };
+		1BC6D460261B3CBC00A43753 /* PlanetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6D45F261B3CBC00A43753 /* PlanetsListViewController.swift */; };
 		1BE7062A2608C950009B3943 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE706292608C950009B3943 /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +41,16 @@
 		1B12415A25FF8FCF00398F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B12415D25FF8FCF00398F86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B12415F25FF8FCF00398F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B91E003261A190B00DF6D59 /* UserAuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthorizationViewController.swift; sourceTree = "<group>"; };
+		1B4FD8852625796C002A6217 /* AvatarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarCell.xib; sourceTree = "<group>"; };
+		1B91E003261A190B00DF6D59 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1BB98383261B414D00BB4A51 /* PlanetsListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsListResponseModel.swift; sourceTree = "<group>"; };
+		1BB98386261B44AA00BB4A51 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		1BBAB58A262812A20001D4CC /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		1BBAB58E26281E850001D4CC /* DataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
+		1BBAB58F26281E850001D4CC /* DataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataCell.xib; sourceTree = "<group>"; };
+		1BBAB5A0262867C60001D4CC /* RxNetworkServies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxNetworkServies.swift; sourceTree = "<group>"; };
+		1BBAB5A3262868BC0001D4CC /* LocationsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsResponseModel.swift; sourceTree = "<group>"; };
+		1BC6D45F261B3CBC00A43753 /* PlanetsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsListViewController.swift; sourceTree = "<group>"; };
 		1BE706292608C950009B3943 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,6 +59,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BBAB59C262867530001D4CC /* RxCocoa in Frameworks */,
+				1BBAB59A262867530001D4CC /* RxRelay in Frameworks */,
+				1BBAB596262867530001D4CC /* RxSwift in Frameworks */,
+				1BC6D45D261B3A1E00A43753 /* PKHUD in Frameworks */,
+				1BB9837F261B3EBE00BB4A51 /* Alamofire in Frameworks */,
+				1BBAB59E262867530001D4CC /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,14 +101,62 @@
 			path = 12;
 			sourceTree = "<group>";
 		};
-		1B689124261A1093008B4CA7 /* AllViewControllers */ = {
+		1B33A001262430E600906F62 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1BBAB588262812600001D4CC /* ProfileScene */,
+				1BC6D45F261B3CBC00A43753 /* PlanetsListViewController.swift */,
+			);
+			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		1B33A0022624310400906F62 /* EntryControllers */ = {
 			isa = PBXGroup;
 			children = (
 				1B12415525FF8FCE00398F86 /* LoginViewController.swift */,
 				1BE706292608C950009B3943 /* RegistrationViewController.swift */,
-				1B91E003261A190B00DF6D59 /* UserAuthorizationViewController.swift */,
+				1BBAB5A0262867C60001D4CC /* RxNetworkServies.swift */,
+				1BBAB5A3262868BC0001D4CC /* LocationsResponseModel.swift */,
+			);
+			path = EntryControllers;
+			sourceTree = "<group>";
+		};
+		1B689124261A1093008B4CA7 /* AllViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1B33A0022624310400906F62 /* EntryControllers */,
+				1B33A001262430E600906F62 /* TabBarControllers */,
 			);
 			path = AllViewControllers;
+			sourceTree = "<group>";
+		};
+		1BB98381261B403A00BB4A51 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1BB98382261B406D00BB4A51 /* DTO */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1BB98382261B406D00BB4A51 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				1BB98383261B414D00BB4A51 /* PlanetsListResponseModel.swift */,
+				1BB98386261B44AA00BB4A51 /* NetworkService.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		1BBAB588262812600001D4CC /* ProfileScene */ = {
+			isa = PBXGroup;
+			children = (
+				1B91E003261A190B00DF6D59 /* ProfileViewController.swift */,
+				1BBAB58A262812A20001D4CC /* AvatarCell.swift */,
+				1B4FD8852625796C002A6217 /* AvatarCell.xib */,
+				1BBAB58E26281E850001D4CC /* DataCell.swift */,
+				1BBAB58F26281E850001D4CC /* DataCell.xib */,
+			);
+			path = ProfileScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +175,14 @@
 			dependencies = (
 			);
 			name = 12;
+			packageProductDependencies = (
+				1BC6D45C261B3A1E00A43753 /* PKHUD */,
+				1BB9837E261B3EBE00BB4A51 /* Alamofire */,
+				1BBAB595262867530001D4CC /* RxSwift */,
+				1BBAB599262867530001D4CC /* RxRelay */,
+				1BBAB59B262867530001D4CC /* RxCocoa */,
+				1BBAB59D262867530001D4CC /* RxBlocking */,
+			);
 			productName = 12;
 			productReference = 1B12414E25FF8FCE00398F86 /* 12.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +210,11 @@
 				Base,
 			);
 			mainGroup = 1B12414525FF8FCE00398F86;
+			packageReferences = (
+				1BC6D45B261B3A1E00A43753 /* XCRemoteSwiftPackageReference "PKHUD" */,
+				1BB9837D261B3EBE00BB4A51 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1BBAB594262867530001D4CC /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 1B12414F25FF8FCE00398F86 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +231,8 @@
 			files = (
 				1B12415E25FF8FCF00398F86 /* LaunchScreen.storyboard in Resources */,
 				1B12415B25FF8FCF00398F86 /* Assets.xcassets in Resources */,
+				1B4FD8862625796C002A6217 /* AvatarCell.xib in Resources */,
+				1BBAB59126281E850001D4CC /* DataCell.xib in Resources */,
 				1B12415925FF8FCE00398F86 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,8 +244,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B91E004261A190B00DF6D59 /* UserAuthorizationViewController.swift in Sources */,
+				1B91E004261A190B00DF6D59 /* ProfileViewController.swift in Sources */,
+				1BBAB58B262812A20001D4CC /* AvatarCell.swift in Sources */,
 				1B12415625FF8FCE00398F86 /* LoginViewController.swift in Sources */,
+				1BBAB5A4262868BC0001D4CC /* LocationsResponseModel.swift in Sources */,
+				1BBAB5A1262867C60001D4CC /* RxNetworkServies.swift in Sources */,
+				1BBAB59026281E850001D4CC /* DataCell.swift in Sources */,
+				1BB98387261B44AA00BB4A51 /* NetworkService.swift in Sources */,
+				1BC6D460261B3CBC00A43753 /* PlanetsListViewController.swift in Sources */,
 				1B12415225FF8FCE00398F86 /* AppDelegate.swift in Sources */,
 				1BE7062A2608C950009B3943 /* RegistrationViewController.swift in Sources */,
 				1B12415425FF8FCE00398F86 /* SceneDelegate.swift in Sources */,
@@ -218,6 +317,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -279,6 +379,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -357,6 +458,66 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1BB9837D261B3EBE00BB4A51 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.2;
+			};
+		};
+		1BBAB594262867530001D4CC /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.0;
+			};
+		};
+		1BC6D45B261B3A1E00A43753 /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1BB9837E261B3EBE00BB4A51 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BB9837D261B3EBE00BB4A51 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		1BBAB595262867530001D4CC /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BBAB594262867530001D4CC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		1BBAB599262867530001D4CC /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BBAB594262867530001D4CC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		1BBAB59B262867530001D4CC /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BBAB594262867530001D4CC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		1BBAB59D262867530001D4CC /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BBAB594262867530001D4CC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		1BC6D45C261B3A1E00A43753 /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BC6D45B261B3A1E00A43753 /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B12414625FF8FCE00398F86 /* Project object */;
 }

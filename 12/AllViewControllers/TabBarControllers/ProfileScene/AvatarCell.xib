@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="221" id="7IO-us-IpO">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AvatarCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="221" id="7IO-us-IpO" customClass="AvatarCell" customModule="_2" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="423"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7IO-us-IpO" id="SiI-dJ-yLI">
@@ -23,8 +23,8 @@
                             <constraint firstAttribute="height" constant="207" id="XC0-ry-ACm"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Mry-zk-17k">
-                        <rect key="frame" x="133" y="137" width="148" height="148"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Mry-zk-17k">
+                        <rect key="frame" x="117" y="121.5" width="180" height="180"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин пользователя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkA-8w-2SD">
@@ -50,6 +50,10 @@
                     <constraint firstItem="Mry-zk-17k" firstAttribute="centerY" secondItem="SiI-dJ-yLI" secondAttribute="centerY" id="r9B-gK-Ei5"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="Mry-zk-17k" id="wjz-Be-dXn"/>
+                <outlet property="fotoBackgroundImageView" destination="lhQ-Lq-fuy" id="3uL-hh-NYK"/>
+            </connections>
             <point key="canvasLocation" x="82.608695652173921" y="88.727678571428569"/>
         </tableViewCell>
     </objects>

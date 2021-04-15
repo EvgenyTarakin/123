@@ -18,7 +18,7 @@ class PlanetsListViewController: UIViewController {
         HUD.dimsBackground = true
     }
 //    
-//    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidAppear(animated)
 //        DispatchQueue.main.async {
 //            <#code#>
@@ -27,8 +27,23 @@ class PlanetsListViewController: UIViewController {
 //            <#code#>
 //        }
 //        loadPlanets()
-//    }
-//    
+//        let rxNetworkService = RxNetworkService()
+//        let signal = rxNetworkService.requestPlanets(page: 1)
+//            .do(
+//                onNext: <#T##((LocationsResponseModel) throws -> Void)?##((LocationsResponseModel) throws -> Void)?##(LocationsResponseModel) throws -> Void#>,
+//                afterNext: <#T##((LocationsResponseModel) throws -> Void)?##((LocationsResponseModel) throws -> Void)?##(LocationsResponseModel) throws -> Void#>,
+//                onError: <#T##((Error) throws -> Void)?##((Error) throws -> Void)?##(Error) throws -> Void#>, afterError: <#T##((Error) throws -> Void)?##((Error) throws -> Void)?##(Error) throws -> Void#>,
+//                onCompleted: <#T##(() throws -> Void)?##(() throws -> Void)?##() throws -> Void#>,
+//                afterCompleted: <#T##(() throws -> Void)?##(() throws -> Void)?##() throws -> Void#>,
+//                onSubscribe: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>,
+//                onSubscribed: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>,
+//                onDispose: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+//
+//        signal
+//            .subscribe()
+//            .disposed(by: disposeBag)
+    }
+    
     func loadPlanets() {
         HUD.show(.progress)
         networkService.getPlanetsList(page: 1) { [weak self] (response, error) in

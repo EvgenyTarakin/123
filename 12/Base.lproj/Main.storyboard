@@ -269,9 +269,42 @@
                     <view key="view" contentMode="scaleToFill" id="eqk-GH-ZNE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oc0-uw-jUd">
+                                <rect key="frame" x="0.0" y="737" width="414" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Выйти">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitButton:" destination="rFX-Hd-EX8" eventType="touchUpInside" id="oKe-P9-Fh9"/>
+                                    <action selector="tappedReadyButton:" destination="uu0-Ju-B35" eventType="touchUpInside" id="lvq-5e-61x"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSS-OO-v97">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="737"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="67o-Tx-XI7"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Oc0-uw-jUd" firstAttribute="leading" secondItem="67o-Tx-XI7" secondAttribute="leading" id="4aX-h1-Xh9"/>
+                            <constraint firstItem="YSS-OO-v97" firstAttribute="top" secondItem="eqk-GH-ZNE" secondAttribute="top" id="Luq-VE-8m3"/>
+                            <constraint firstItem="67o-Tx-XI7" firstAttribute="bottom" secondItem="Oc0-uw-jUd" secondAttribute="bottom" constant="28" id="W7f-MS-ERq"/>
+                            <constraint firstItem="YSS-OO-v97" firstAttribute="leading" secondItem="67o-Tx-XI7" secondAttribute="leading" id="cN2-dP-rib"/>
+                            <constraint firstItem="YSS-OO-v97" firstAttribute="trailing" secondItem="67o-Tx-XI7" secondAttribute="trailing" id="sC4-4e-NHA"/>
+                            <constraint firstItem="Oc0-uw-jUd" firstAttribute="trailing" secondItem="67o-Tx-XI7" secondAttribute="trailing" id="vvz-Ow-bNq"/>
+                            <constraint firstItem="Oc0-uw-jUd" firstAttribute="top" secondItem="YSS-OO-v97" secondAttribute="bottom" id="wTZ-uh-Laz"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="3hM-XR-i3H"/>
+                    <navigationItem key="navigationItem" id="3In-eq-3fm"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="profileTableView" destination="YSS-OO-v97" id="ZpA-RA-vLp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nMG-M8-2fq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
