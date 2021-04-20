@@ -15,11 +15,6 @@ class DataCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//        let date = Date()
-//        let day = Calendar.current.component(.day, from: date)
-//        let month = Calendar.current.component(.month, from: date)
-//        let year = Calendar.current.component(.year, from: date)
-        
         let dataFormatter = DateFormatter()
         dataFormatter.dateFormat = "DD.LLLL.YYYY"
         dateDataCell?.text = dataFormatter.string(from: Date())
