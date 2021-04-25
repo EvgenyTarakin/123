@@ -12,13 +12,16 @@ class AvatarCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        fotoBackgroundImageView.alpha = 0.3
+        photoBackgroundImageView.alpha = 0.3
         avatarImageView.layer.cornerRadius = 74.0
+        
     }
 
     override func prepareForReuse() {
         super.prepareForReuse()
         self.accessoryType = .none
+        
+        photoBackgroundImageView.backgroundColor = DataCell().colorButton.backgroundColor
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,7 +29,7 @@ class AvatarCell: UITableViewCell {
 
     }
 
-    @IBOutlet weak var fotoBackgroundImageView: UIImageView!
+    @IBOutlet weak var photoBackgroundImageView: UIImageView!
     @IBOutlet weak var avatarImageView: UIImageView!
     
 }

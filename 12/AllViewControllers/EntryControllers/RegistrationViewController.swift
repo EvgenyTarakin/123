@@ -33,8 +33,14 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
+    let labelError = UILabel(frame: CGRect(origin: CGPoint(x: 21, y: 277), size: CGSize(width: 150, height: 20)))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        labelError.text = "Enter all text fields!"
+        labelError.textColor = .red
+        labelError.alpha = 0
         
         registerForKeyboardNotifications()
         
@@ -50,15 +56,24 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         
         let tapViewGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapView))
         
+        view.addSubview(labelError)
         view.addGestureRecognizer(tapViewGestureRecognizer)
     }
     
     @IBOutlet weak var registrationScrollView: UIScrollView!
     
     @IBAction func tappedReadyButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(identifier: "TabBarController")
-        navigationController?.pushViewController(controller, animated: true)
+        if collectionRegistrationTextFieldsOutlets[0].text == "" || collectionRegistrationTextFieldsOutlets[1].text == "" || collectionRegistrationTextFieldsOutlets[2].text == "" {
+            labelError.alpha = 1
+            shakeTextField(collectionRegistrationTextFieldsOutlets)
+            UIView.animate(withDuration: 1.5) {
+                self.labelError.alpha = 0
+            }
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(identifier: "TabBarController")
+            navigationController?.pushViewController(controller, animated: true)
+        }
     }
     
     @objc func tapView() {
