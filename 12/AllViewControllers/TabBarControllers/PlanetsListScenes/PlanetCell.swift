@@ -13,15 +13,6 @@ class PlanetCell: UITableViewCell {
         super.awakeFromNib()
         accessoryType = .disclosureIndicator
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
-    
-    override func prepareForReuse() {
-
-    }
     
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var typeLocationLabel: UILabel!

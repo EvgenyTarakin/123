@@ -23,11 +23,6 @@ class AvatarCell: UITableViewCell {
         
         photoBackgroundImageView.backgroundColor = DataCell().colorButton.backgroundColor
     }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
 
     @IBOutlet weak var photoBackgroundImageView: UIImageView!
     @IBOutlet weak var avatarImageView: UIImageView!

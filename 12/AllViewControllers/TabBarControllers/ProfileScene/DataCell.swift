@@ -18,10 +18,6 @@ class DataCell: UITableViewCell {
         
         colorButton?.layer.cornerRadius = 5
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
     @IBAction func pressColorButton(_ sender: Any) {
         UIView.animate(withDuration: 0.3) {
