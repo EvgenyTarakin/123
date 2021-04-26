@@ -57,6 +57,8 @@ class PlanetsListViewController: UIViewController {
     @IBOutlet weak var planetsTableView: UITableView!
     
     @IBAction func reloadPlanets(_ sender: Any) {
+        page = 1
+        tableSource = []
         loadPlanets()
     }
     
