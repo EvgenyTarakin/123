@@ -8,11 +8,18 @@
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
-
+    
+    let labelError = UILabel(frame: CGRect(origin: CGPoint(x: 21, y: 335), size: CGSize(width: 150, height: 20)))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        labelError.text = "Enter all text fields!"
+        labelError.textColor = .red
+        labelError.alpha = 0
+        
+        allTextFields.append(loginTextField)
+        allTextFields.append(passwordTextField)
         loginTextField.returnKeyType = .next
         loginTextField.keyboardType = UIKeyboardType.emailAddress
         
@@ -23,9 +30,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         let tapViewGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapView))
         
+        view.addSubview(labelError)
         view.addGestureRecognizer(tapViewGestureRecognizer)
     }
-    
     
     @IBOutlet weak var authorizationLabel: UILabel!
     @IBOutlet weak var instructionLabel: UILabel!
@@ -36,11 +43,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var entryButton: UIButton!
     @IBOutlet weak var registrationButton: UIButton!
     
+    var allTextFields: [UITextField] = []
     
     @IBAction func tappedEntryButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(identifier: "TabBarController")
-        navigationController?.pushViewController(controller, animated: true)
+        if allTextFields[0].text == "" || allTextFields[1].text == "" {
+            labelError.alpha = 1
+            shakeTextField(allTextFields)
+            UIView.animate(withDuration: 1.5) {
+                self.labelError.alpha = 0
+            }
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(identifier: "TabBarController")
+            navigationController?.pushViewController(controller, animated: true)
+        }
     }
     
     

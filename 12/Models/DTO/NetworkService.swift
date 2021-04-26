@@ -25,7 +25,6 @@ class NetworkService: PlanetListNetworkService {
         performGetRequest(urlString: NetworkConstants.URLString.planetsList + "?page=\(page)", onRequestCompleted: onRequestCompleted)
     }
     
-    
     private func performGetRequest<ResponseModel: Decodable>(urlString: String, method: HTTPMethod = .get, onRequestCompleted: @escaping ((ResponseModel?, Error?)->())) {
         AF.request(urlString,
                    method: method,
