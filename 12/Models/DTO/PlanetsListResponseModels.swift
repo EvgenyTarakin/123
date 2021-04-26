@@ -25,3 +25,9 @@ struct PlanetsListResultsResponseModel: Decodable {
     let type: String?
     let residents: [String]
 }
+
+struct ResidentsListResponseModel: Decodable {
+    let name: String?
+    let sex: String?
+    let image: URL?
+}

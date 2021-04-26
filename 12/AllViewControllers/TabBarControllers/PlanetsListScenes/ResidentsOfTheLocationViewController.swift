@@ -47,7 +47,7 @@ extension ResidentsOfTheLocationViewController: UICollectionViewDelegate,UIColle
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ResidentCell", for: indexPath) as? ResidentCell
         else { return ResidentCell() }
-        cell.humanLabel.text = collectionSource[indexPath.row].name
+//        cell.humanLabel.text = collectionSource[indexPath.row].name
         
         return cell
     }

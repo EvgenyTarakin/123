@@ -18,10 +18,18 @@ protocol PlanetListNetworkService {
     func getPlanetsList(page: Int, onRequestCompleted: @escaping ((PlanetsListResponseModel?, Error?) -> ()))
 }
 
+protocol ResidentsListNetworkService {
+    func getResidentsList(page: Int, onRequestCompleted: @escaping ((ResidentsListResponseModel?, Error?) -> ()))
+}
 
-class NetworkService: PlanetListNetworkService {
+
+class NetworkService: PlanetListNetworkService, ResidentsListNetworkService {
     
     func getPlanetsList(page: Int, onRequestCompleted: @escaping ((PlanetsListResponseModel?, Error?) -> ())) {
+        performGetRequest(urlString: NetworkConstants.URLString.planetsList + "?page=\(page)", onRequestCompleted: onRequestCompleted)
+    }
+    
+    func getResidentsList(page: Int, onRequestCompleted: @escaping ((ResidentsListResponseModel?, Error?) -> ())) {
         performGetRequest(urlString: NetworkConstants.URLString.planetsList + "?page=\(page)", onRequestCompleted: onRequestCompleted)
     }
     
@@ -45,7 +53,6 @@ class NetworkService: PlanetListNetworkService {
                 onRequestCompleted(nil, error)
             }
         }
-        
-        
     }
+    
 }
