@@ -15,7 +15,8 @@ class ResidentCell: UICollectionViewCell {
     }
     
     @IBOutlet weak var avatarHuman: UIImageView!
-    @IBOutlet weak var humanLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var sexLabel: UILabel!
+    @IBOutlet weak var speciesLabel: UILabel!
     
 }

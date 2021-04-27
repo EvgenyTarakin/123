@@ -5,7 +5,7 @@
 //  Created by Евгений Таракин on 05.04.2021.
 //
 
-import Foundation
+import UIKit
 import Alamofire
 
 struct NetworkConstants {
@@ -14,12 +14,15 @@ struct NetworkConstants {
     }
 }
 
+var indexResident = 0
+
 protocol PlanetListNetworkService {
     func getPlanetsList(page: Int, onRequestCompleted: @escaping ((PlanetsListResponseModel?, Error?) -> ()))
 }
 
 protocol ResidentsListNetworkService {
-    func getResidentsList(page: Int, onRequestCompleted: @escaping ((ResidentsListResponseModel?, Error?) -> ()))
+    func getResident(stringURL: String, onRequestCompleted: @escaping ((ResidentResponse?, Error?) -> ()))
+    func getImage(stringURL: String, onRequestCompleted: @escaping ((UIImage?, Error?) -> ()))
 }
 
 
@@ -29,8 +32,19 @@ class NetworkService: PlanetListNetworkService, ResidentsListNetworkService {
         performGetRequest(urlString: NetworkConstants.URLString.planetsList + "?page=\(page)", onRequestCompleted: onRequestCompleted)
     }
     
-    func getResidentsList(page: Int, onRequestCompleted: @escaping ((ResidentsListResponseModel?, Error?) -> ())) {
-        performGetRequest(urlString: NetworkConstants.URLString.planetsList + "?page=\(page)", onRequestCompleted: onRequestCompleted)
+    func getResident(stringURL: String, onRequestCompleted: @escaping ((ResidentResponse?, Error?) -> ())) {
+        performGetRequest(urlString: stringURL, onRequestCompleted: onRequestCompleted)
+    }
+    
+    func getImage(stringURL: String, onRequestCompleted: @escaping ((UIImage?, Error?) -> ())) {
+        AF.request(stringURL, method: .get).response { (data) in
+            if let data = data.data {
+                onRequestCompleted(UIImage(data: data), nil)
+                return 
+            }
+            onRequestCompleted(nil, data.error)
+        }
+        
     }
     
     private func performGetRequest<ResponseModel: Decodable>(urlString: String, method: HTTPMethod = .get, onRequestCompleted: @escaping ((ResponseModel?, Error?)->())) {

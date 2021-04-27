@@ -8,7 +8,6 @@
 import UIKit
 import PKHUD
 
-
 struct Planet {
     let name: String?
     let type: String?
@@ -75,15 +74,14 @@ extension PlanetsListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlanetCell") as? PlanetCell
         else { return PlanetCell() }
+        
         cell.locationLabel.text = tableSource[indexPath.row].name
         cell.typeLocationLabel.text = tableSource[indexPath.row].type
         cell.populationLabel.text = "Население: \(tableSource[indexPath.row].residents.count)"
         
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -91,30 +89,34 @@ extension PlanetsListViewController: UITableViewDelegate, UITableViewDataSource 
         guard let controller = storyboard.instantiateViewController(identifier: "ResidentsOfTheLocationViewController") as? ResidentsOfTheLocationViewController
         else { return }
         controller.planetName = "\(tableSource[indexPath.row].name!)"
-        controller.populationPlanet = tableSource[indexPath.row].residents.count
-        
-        controller.collectionSource.append(Resident(name: "\(tableSource[indexPath.row].residents[indexPath.row])", sex: nil, avatar: nil))
+        controller.arrayResidents = tableSource[indexPath.row].residents
         
         navigationController?.pushViewController(controller, animated: true)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-        if indexPath.row == tableSource.count / 2 {
-            DispatchQueue.global().async {
-                self.networkService.getPlanetsList(page: self.page) { [weak self] (response, error) in
-                    DispatchQueue.main.async {
-                        guard let results = response?.results,
-                              let self = self
-                        else { return }
-                        self.tableSource.append(contentsOf: results.map({ (planetResponse) -> Planet in
-                            return Planet(name: planetResponse.name, type: planetResponse.type, residents: planetResponse.residents)
-                        }))
+            
+            if indexPath.row == tableSource.count / 2 {
+                DispatchQueue.global().async {
+                    self.networkService.getPlanetsList(page: self.page) { [weak self] (response, error) in
+                        DispatchQueue.main.async {
+                            guard let results = response?.results,
+                                  let self = self
+                            else { return }
+                            self.page += 1
+                            
+                            let lastIndexPathRow = self.tableSource.count
+                            self.tableSource.append(contentsOf: results.map({ (planetResponse) -> Planet in
+                                return Planet(name: planetResponse.name, type: planetResponse.type, residents: planetResponse.residents)
+                            }))
+                            var indexes: [IndexPath] = []
+                            for index in lastIndexPathRow...self.tableSource.count-1 {
+                                indexes.append(IndexPath(row: index, section: 0))
+                            }
+                            tableView.insertRows(at: indexes, with: .none)
+                        }
                     }
                 }
             }
-            page += 1
         }
-    }
-    
 }

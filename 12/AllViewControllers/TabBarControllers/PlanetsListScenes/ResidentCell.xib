@@ -23,7 +23,7 @@
                             <constraint firstAttribute="width" constant="120" id="Td4-4e-Gc3"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Human" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbb-n3-Fhb">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbb-n3-Fhb">
                         <rect key="frame" x="0.0" y="134" width="173" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="tGv-od-QCQ"/>
@@ -41,9 +41,19 @@
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="species" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shD-qM-4md">
+                        <rect key="frame" x="0.0" y="165" width="173" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="Fl7-GB-WgD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" systemColor="systemGray3Color"/>
                 <constraints>
+                    <constraint firstItem="shD-qM-4md" firstAttribute="leading" secondItem="pKS-02-EHL" secondAttribute="leading" id="HAa-AX-FzF"/>
                     <constraint firstItem="rT7-Jf-mfT" firstAttribute="centerX" secondItem="pKS-02-EHL" secondAttribute="centerX" id="KK9-XU-87d"/>
                     <constraint firstAttribute="trailing" secondItem="Vbb-n3-Fhb" secondAttribute="trailing" id="T5N-IU-lFU"/>
                     <constraint firstItem="rT7-Jf-mfT" firstAttribute="top" secondItem="pKS-02-EHL" secondAttribute="top" constant="9" id="j8t-gg-ch3"/>
@@ -51,15 +61,18 @@
                     <constraint firstItem="Vbb-n3-Fhb" firstAttribute="top" secondItem="rT7-Jf-mfT" secondAttribute="bottom" constant="5" id="mcO-h1-qzv"/>
                     <constraint firstItem="Vbb-n3-Fhb" firstAttribute="leading" secondItem="pKS-02-EHL" secondAttribute="leading" id="meQ-OJ-cLs"/>
                     <constraint firstItem="Vbb-n3-Fhb" firstAttribute="centerX" secondItem="pKS-02-EHL" secondAttribute="centerX" id="ptQ-Vi-Od6"/>
+                    <constraint firstItem="shD-qM-4md" firstAttribute="top" secondItem="Vbb-n3-Fhb" secondAttribute="bottom" constant="13" id="rwO-w2-q5x"/>
                     <constraint firstItem="Go2-vm-BF8" firstAttribute="centerX" secondItem="pKS-02-EHL" secondAttribute="centerX" id="uwe-zF-dXw"/>
                     <constraint firstAttribute="trailing" secondItem="Go2-vm-BF8" secondAttribute="trailing" id="vu3-vb-Q2p"/>
                     <constraint firstItem="Go2-vm-BF8" firstAttribute="top" secondItem="rT7-Jf-mfT" secondAttribute="bottom" constant="23" id="wOK-xb-61E"/>
+                    <constraint firstAttribute="trailing" secondItem="shD-qM-4md" secondAttribute="trailing" id="z6r-AI-Ezd"/>
                 </constraints>
             </collectionViewCellContentView>
             <connections>
                 <outlet property="avatarHuman" destination="rT7-Jf-mfT" id="Tnf-cb-8zp"/>
-                <outlet property="humanLabel" destination="Vbb-n3-Fhb" id="eIo-6v-6I9"/>
+                <outlet property="nameLabel" destination="Vbb-n3-Fhb" id="eIo-6v-6I9"/>
                 <outlet property="sexLabel" destination="Go2-vm-BF8" id="d2b-Rn-fP2"/>
+                <outlet property="speciesLabel" destination="shD-qM-4md" id="Ipx-Uz-hHQ"/>
             </connections>
             <point key="canvasLocation" x="234.05797101449278" y="104.79910714285714"/>
         </collectionViewCell>

@@ -287,10 +287,12 @@
                                     <action selector="tappedReadyButton:" destination="uu0-Ju-B35" eventType="touchUpInside" id="lvq-5e-61x"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSS-OO-v97">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSS-OO-v97">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="539"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="539" id="dzV-q6-vgM"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Tk1-XT-14X"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="9Ut-vA-Y7X"/>
                                 <sections/>
@@ -300,6 +302,9 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="67o-Tx-XI7" firstAttribute="bottom" secondItem="Oc0-uw-jUd" secondAttribute="bottom" constant="28" id="GDh-nO-CGu"/>
+                            <constraint firstItem="YSS-OO-v97" firstAttribute="leading" secondItem="67o-Tx-XI7" secondAttribute="leading" id="PEj-5X-xfX"/>
+                            <constraint firstItem="YSS-OO-v97" firstAttribute="trailing" secondItem="67o-Tx-XI7" secondAttribute="trailing" id="dKM-y2-PZU"/>
+                            <constraint firstItem="YSS-OO-v97" firstAttribute="top" secondItem="eqk-GH-ZNE" secondAttribute="top" id="pMa-8I-84n"/>
                             <constraint firstItem="Oc0-uw-jUd" firstAttribute="leading" secondItem="67o-Tx-XI7" secondAttribute="leading" id="spl-w4-HMe"/>
                             <constraint firstItem="Oc0-uw-jUd" firstAttribute="trailing" secondItem="67o-Tx-XI7" secondAttribute="trailing" id="xuF-Pz-cHQ"/>
                         </constraints>
@@ -390,7 +395,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ayw-by-Ogm">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="Ayw-by-Ogm">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zg2-Nf-0k3">
