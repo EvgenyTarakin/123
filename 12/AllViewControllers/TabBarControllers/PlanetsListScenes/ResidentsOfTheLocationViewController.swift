@@ -72,7 +72,8 @@ extension ResidentsOfTheLocationViewController: UICollectionViewDelegate,UIColle
         else { return ResidentCell() }
         
         let currentURLString = arrayResidents[indexPath.row]
-        
+        cell.idURLString = currentURLString
+        print(cell.idURLString as Any)
         if let resident = LocalResidentsStorage.shared.dictionaryCache[currentURLString] {
             cell.nameLabel.text = resident.name
             cell.sexLabel.text = resident.sex
@@ -81,15 +82,23 @@ extension ResidentsOfTheLocationViewController: UICollectionViewDelegate,UIColle
         } else {
             DispatchQueue.global().async {
                 self.networkService.getResident(stringURL: currentURLString) { [ weak self ] (response, error) in
-                    DispatchQueue.main.async {
-                        cell.nameLabel.text = response?.name
-                        cell.sexLabel.text = response?.gender
-                        cell.speciesLabel.text = response?.species
+                    print(cell.idURLString as Any)
+                    print(currentURLString)
+                    if let idURLString = cell.idURLString,
+                       idURLString == currentURLString {
+                        DispatchQueue.main.async {
+                            cell.nameLabel.text = response?.name
+                            cell.sexLabel.text = response?.gender
+                            cell.speciesLabel.text = response?.species
+                        }
                     }
                     if let imageStringURL = response?.image {
                         self?.networkService.getImage(stringURL: imageStringURL) { (image, error) in
                             DispatchQueue.main.async {
-                                cell.avatarHuman.image = image
+                                if let idURLString = cell.idURLString,
+                                      idURLString == currentURLString {
+                                    cell.avatarHuman.image = image
+                                }
                                 LocalResidentsStorage.shared.dictionaryCache[currentURLString] = Resident(imageLink: response?.image, imageUI: image, previewImage: image, name: response?.name, sex: response?.gender, species: response?.species)
                             }
                         }

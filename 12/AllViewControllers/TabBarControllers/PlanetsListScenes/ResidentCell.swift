@@ -18,5 +18,7 @@ class ResidentCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var sexLabel: UILabel!
     @IBOutlet weak var speciesLabel: UILabel!
+ 
+    var idURLString: String?
     
 }
